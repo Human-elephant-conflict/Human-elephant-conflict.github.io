@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        const detailsData = [
+            {
+                title: "Xishuangbanna - Start of the Journey",
+                image: "images/Xishuangbanna.gif",
+                description: "In March 2020, the herd, initially 16 elephants, began their northward journey from Xishuangbanna into Pu'er City."
+            },
+            {
+                title: "Pu'er - First Stop",
+                image: "images/Kunming.jpg",
+                description: "In December 2020, the herd gave birth to a new elephant calf in Pu'er, increasing their number to 17.."
+            },
+            {
+                title: "Yuxi - Continuing Northward",
+                image: "images/Yuxi.jpg",
+                description: "On April 16, 2021, the 17 elephants entered Yuxi City. On May 30, 2021, the herd migrated to the vicinity of Hongta District in Yuxi. "
+            },
+            {
+                title: "Approaching Kunming",
+                image: "images/Puer.gif",
+                description: "On August 8, 2021, the herd of 14 elephants safely crossed Kunming and returned to their habitat."
+            }
+        ];
+    
+        function showDetail(index) {
+            const popup = document.getElementById('detailsPopup');
+            const content = document.getElementById('detailsContent');
+            
+            const { title, image, description } = detailsData[index];
+            content.innerHTML = `
+                <h2>${title}</h2>
+                <img src="${image}" alt="${title}">
+                <p>${description}</p>
+            `;
+            
+            popup.style.display = 'block';
+        }
+    
+        function closeDetail() {
+            document.getElementById('detailsPopup').style.display = 'none';
+        }
+    </script>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacts - Human-Elephant Conflict in Yunnan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Human-Elephant Conflict in Yunnan</h1>
+        
+        <nav>
+                <ul>
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="causes.htm">Causes</a></li>
+                    <li><a href="impacts.htm">Impacts</a></li>
+                    <li><a href="solutions.htm">Solutions</a></li>
+                    <li><a href="about.htm">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="impacts">
+        <div class="container">
+            <h2>Impacts of the Conflict</h2>
+            <ul>
+                In recent years, a significant overlap between human activities and the habitat of Asian elephants has emerged in Yunnan Province, an area that constitutes approximately one-fifth of the national land area. Since 2010, Xishuangbanna has recorded 6,674 incidents involving wild Asian elephants, resulting in damage to approximately 22,000 acres of crops. These encounters have led to injuries and fatalities, with some local residents expressing fear at the sight of elephants.            </p>
+ 
+            </ul>
+        </div>
+
+            <div class = "container">
+                <div class="causes-section">
+                    <div class="cause-item">
+                      <img src="images/impact1.jpg" alt="Elephant Image 1" class="cause-image">
+                      <div class="cause-details">
+                        <h3>Crop Damage</h3>
+                        <p>The frequent foraging of elephants in agricultural areas has resulted in extensive crop damage, causing severe economic strain for local farmers. From 2013 to 2019, human-elephant conflicts in the region led to direct property losses amounting to 210 million yuan, with the destruction of crops accounting for a substantial portion. In a notable incident in April 2021, a herd of 17 elephants migrating from their habitat caused damage to 842 acres of crops within just 40 days, translating to an estimated economic loss of nearly 6.8 million yuan.
+                        </p>
+                      </div>
+                    </div>
+                  
+                    <div class="cause-item">
+                      <img src="images/impact2.jpg" alt="Elephant Image 2" class="cause-image">
+                      <div class="cause-details">
+                        <h3>Property Destruction</h3>
+                        <p>As elephants increasingly venture into human settlements, they not only damage crops but also destroy homes and property. The repercussions of these incidents extend beyond the immediate economic losses, causing distress and fear within local communities. The ongoing pressure from expanding human development and inadequate land management practices has significantly increased the frequency of these destructive encounters, further aggravating tensions.
+                        </p>
+                      </div>
+                    </div>
+    
+                    <div class="cause-item">
+                        <img src="images/impact3.jpg" alt="Elephant Image 3" class="cause-image">
+                        <div class="cause-details">
+                          <h3>Human Injuries and Fatalities</h3>
+                          <p>
+                            The escalation of human-elephant conflicts has also resulted in injuries and fatalities among local residents. From 1991 to 2011, there were 198 recorded injuries caused by wild elephants in Xishuangbanna, with 33 fatalities. The situation has worsened in recent years, particularly post-2010, with a troubling trend of elephant-related deaths among community members. It is reported that there have been up to 43 fatalities due to elephant encounters in the last 30 years, highlighting the serious dangers posed by these conflicts.                        </p>
+                        </div>
+                      </div>
+    
+                      <div class="cause-item">
+                        <img src="images/impact4.jpg" alt="Elephant Image 4" class="cause-image">
+                        <div class="cause-details">
+                          <h3>Economic Burden and Community Fear</h3>
+                          <p>
+                            The economic impact of the human-elephant conflict is profound, as local communities grapple with the financial consequences of damaged crops and property. The fear associated with potential elephant encounters can lead to psychological distress, affecting the quality of life for those living in proximity to elephant habitats. With the increasing overlap of human and elephant territories, the likelihood of conflicts continues to rise, perpetuating a cycle of fear and economic instability within these communities.                        </p>
+                        </div>
+                      </div>
+                  
+                    <!-- Repeat this structure for more images -->
+                  </div>
+                  
+            </div>
+    </section>
+
+    <section id="elephant-migration">
+        <h2>Impact of the 2020 Asian Elephant Migration</h2>
+        <p>In 2020, a herd of Asian elephants embarked on a 500km journey that caused significant disruptions and illustrated the growing human-elephant conflict. This section provides a detailed timeline of their migration and its effects on the local population.</p>
+    
+        <div class="timeline-container">
+            <div class="timeline">
+                <div class="timeline-event" onclick="showDetail(0)">
+                    <div class="timeline-point"></div>
+                    <p>Start - Xishuangbanna</p>
+                </div>
+                <div class="timeline-event" onclick="showDetail(1)">
+                    <div class="timeline-point"></div>
+                    <p>Stop 1 - Pu'er</p>
+                </div>
+                <div class="timeline-event" onclick="showDetail(2)">
+                    <div class="timeline-point"></div>
+                    <p>Stop 2 - Yuxi</p>
+                </div>
+                <div class="timeline-event" onclick="showDetail(3)">
+                    <div class="timeline-point"></div>
+                    <p>Approaching Kunming</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Details Popup for Timeline Events -->
+        <div id="detailsPopup" class="details-popup">
+            <span class="close-btn" onclick="closeDetail()">×</span>
+            <div id="detailsContent"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Human-Elephant Conflict in Yunnan. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
